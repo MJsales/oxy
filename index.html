@@ -9,11 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;
+            background-color: #333; /* Dark grey */
+            color: white;
         }
         header {
-            background-color: #ff0000;
-            color: white;
+            background-color: #000; /* Black */
             text-align: center;
             padding: 20px;
         }
@@ -25,29 +25,32 @@
             margin: 20px auto;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: white;
+            background-color: #444; /* Dark grey */
             padding: 20px;
             width: 300px;
         }
         .image-gallery {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
         .image-gallery img {
-            margin: 5px;
-            width: 80px;
+            margin: 10px 0;
+            width: 80%;
             height: auto;
             cursor: pointer;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #ff0000;
-            color: white;
+            background-color: #000; /* Black */
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+        a {
+            color: #ff0000; /* Red */
+            text-decoration: none;
         }
     </style>
 </head>
@@ -57,7 +60,7 @@
         <img src="oxy.png" alt="Oxy Logo" style="width: 150px; height: auto;">
     </header>
     <main>
-        <h2>Our $10 Sweats</h2>
+        <h2><a href="sweatpants.html">Our $10 Sweats</a></h2>
         <div class="product">
             <h3>Single Pair of Sweats</h3>
             <p>Price: $10</p>
