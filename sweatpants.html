@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Sweatpants - Oxy Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark grey */
+            color: white;
+        }
+        header {
+            background-color: #000; /* Black */
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .product {
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #444; /* Dark grey */
+            padding: 20px;
+            width: 300px;
+        }
+        .image-gallery img {
+            margin: 10px 0;
+            width: 80%;
+            height: auto;
+        }
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 10px;
+            width: 80%;
+        }
+        button {
+            background-color: #ff0000; /* Red */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000; /* Black */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Oxy Store - Buy Your Sweatpants</h1>
+        <img src="oxy.png" alt="Oxy Logo" style="width: 150px; height: auto;">
+    </header>
+    <main>
+        <div class="product">
+            <h2>Single Pair of Sweats</h2>
+            <p>Price: $10</p>
+            <div class="image-gallery">
+                <img src="sweats1.png" alt="Sweatshirt Image 1">
+                <img src="sweats2.png" alt="Sweatshirt Image 2">
+                <img src="sweats3.png" alt="Sweatshirt Image 3">
+                <img src="sweats4.png" alt="Sweatshirt Image 4">
+            </div>
+            <form action="thankyou.html" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="address" placeholder="Shipping Address" required>
+                <button type="submit">Buy Now</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Oxy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
