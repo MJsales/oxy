@@ -76,23 +76,16 @@
                 <img src="sweats3.png" alt="Sweatshirt Image 3">
                 <img src="sweats4.png" alt="Sweatshirt Image 4">
             </div>
-            <form onsubmit="return showAlert();">
+            <form action="order.php" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="text" name="address" placeholder="Shipping Address" required>
                 <button type="submit">Buy Now</button>
             </form>
-            
-            <script>
-                function showAlert() {
-                    alert('Thank you for your purchase! Your order has been received.');
-                    return false; // Prevent form submission
-                }
-            </script>
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 Oxy. All rights reserved.</p>
+        <p>&copy; 2025 oxy. All rights reserved.</p>
     </footer>
 </body>
 </html>
