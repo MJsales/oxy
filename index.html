@@ -28,6 +28,7 @@
             background-color: #444; /* Dark grey */
             padding: 20px;
             width: 300px;
+            position: relative; /* Needed for absolute positioning of images */
         }
         .image-gallery {
             display: flex;
@@ -39,6 +40,13 @@
             width: 80%;
             height: auto;
             cursor: pointer;
+            position: absolute; /* Stack images on top of each other */
+            opacity: 0; /* Make images invisible by default */
+            transition: opacity 0.3s; /* Smooth transition */
+        }
+        /* Show the first image */
+        .image-gallery img:first-child {
+            opacity: 1;
         }
         footer {
             text-align: center;
@@ -65,11 +73,10 @@
             <h3>Single Pair of Sweats</h3>
             <p>Price: $10</p>
             <div class="image-gallery">
-                <img src="sweats1.png" alt="Sweatshirt Image 1" onclick="changeMainImage('sweats1.png')">
-                <img src="sweats2.png" alt="Sweatshirt Image 2" onclick="changeMainImage('sweats2.png')">
-                <img src="sweats3.png" alt="Sweatshirt Image 3" onclick="changeMainImage('sweats3.png')">
-                <img src="sweats4.png" alt="Sweatshirt Image 4" onclick="changeMainImage('sweats4.png')">
-               
+                <img src="sweats1.png" alt="Sweatshirt Image 1" onclick="changeMainImage('sweats1.png', this)">
+                <img src="sweats2.png" alt="Sweatshirt Image 2" onclick="changeMainImage('sweats2.png', this)">
+                <img src="sweats3.png" alt="Sweatshirt Image 3" onclick="changeMainImage('sweats3.png', this)">
+                <img src="sweats4.png" alt="Sweatshirt Image 4" onclick="changeMainImage('sweats4.png', this)">
             </div>
             <img id="mainImage" src="sweats1.png" alt="Main Sweatshirt Image" style="margin-top: 20px; width: 100%;">
         </div>
@@ -79,8 +86,13 @@
     </footer>
     
     <script>
-        function changeMainImage(image) {
+        function changeMainImage(image, clickedImage) {
             document.getElementById('mainImage').src = image;
+            const images = document.querySelectorAll('.image-gallery img');
+            images.forEach(img => {
+                img.style.opacity = 0; // Hide all images
+            });
+            clickedImage.style.opacity = 1; // Show the clicked image
         }
     </script>
 </body>
