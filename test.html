@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OXY Store</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .product {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid white;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .product:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Oxy Store</h1>
+    <div class="product">
+        <h2>NIKE</h2>
+        <p>Price: $5.00</p>
+        <button class="button" onclick="alert('Proceeding to payment...')">Buy Now</button>
+    </div>
+</body>
+</html>
